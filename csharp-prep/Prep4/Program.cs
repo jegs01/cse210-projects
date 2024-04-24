@@ -15,8 +15,11 @@ class Program
             string userResponse = Console.ReadLine();
             userNumber = int.Parse(userResponse);
 
-            // Add the number to the list regardless of being zero or not
-            numbers.Add(userNumber);
+            // Only add the number to the list if it is not 0
+            if (userNumber != 0)
+            {
+                numbers.Add(userNumber);
+            }
         }
 
         // Compute the sum
