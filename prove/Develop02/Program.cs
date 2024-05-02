@@ -10,7 +10,17 @@ class Program
         "What was the best part of my day?",
         "How did I see the hand of the Lord in my life today?",
         "What was the strongest emotion I felt today?",
-        "If I had one thing I could do over today, what would it be?"
+        "If I had one thing I could do over today, what would it be?",
+        "What was the highlight of today?",
+        "Describe a random act of kindness you witnessed or performed.",
+        "Reflect on a challenge you faced today and how you overcame it.",
+        "Share a moment of gratitude from today.",
+        "Write about a new skill or lesson you learned recently.",
+        "Describe a place you visited today and how it made you feel.",
+        "Write about something that made you laugh today.",
+        "Reflect on a goal you accomplished recently and how it felt.",
+        "Describe an inspiring conversation you had today.",
+        "Write about a book, movie, or song that moved you recently."
     };
 
     static JournalManager journalManager = new JournalManager();
