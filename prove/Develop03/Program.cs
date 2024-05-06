@@ -27,7 +27,7 @@ class Program
         {
             Console.Clear();
             Scripture randomScripture = scriptures[random.Next(scriptures.Count)];
-            randomScripture.HideRandomWord();
+            randomScripture.HideRandomWords();
             randomScripture.Display();
             Console.WriteLine("\nPress Enter to continue or type 'quit' to exit.");
             string input = Console.ReadLine().ToLower();

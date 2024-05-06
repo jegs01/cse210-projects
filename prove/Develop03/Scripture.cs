@@ -25,16 +25,20 @@ class Scripture
 
     public string Reference { get; }
 
-    public void HideRandomWord()
+    public void HideRandomWords()
     {
         if (!AllWordsHidden)
         {
-            int index = random.Next(words.Count);
-            if (!words[index].IsHidden)
+            int index1, index2;
+            do
             {
-                words[index].Hide();
-                hiddenWordCount++;
-            }
+                index1 = random.Next(words.Count);
+                index2 = random.Next(words.Count);
+            } while (index1 == index2 || words[index1].IsHidden || words[index2].IsHidden);
+
+            words[index1].Hide();
+            words[index2].Hide();
+            hiddenWordCount += 2;
         }
     }
 
