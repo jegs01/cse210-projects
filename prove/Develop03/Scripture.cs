@@ -44,6 +44,7 @@ class Scripture
 
     public void Display()
     {
+        Console.WriteLine($"Reference: {Reference}");
         foreach (Word word in words)
         {
             Console.Write(word.IsHidden ? "___ " : $"{word.Text} ");
@@ -51,8 +52,7 @@ class Scripture
     }
 
     public void DisplayWithReference()
-    {
-        Console.WriteLine($"Reference: {Reference}");
+    { 
         Display();
     }
 }
