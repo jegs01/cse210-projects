@@ -4,7 +4,8 @@ using System.IO;
 using System.Linq;
 
 // The scripture load from scriptures.txt file
-
+// The program work with a library of scriptures rather than a single one 
+// The program choose scriptures at random to present to the user
 class Program
 {
     static void Main(string[] args)

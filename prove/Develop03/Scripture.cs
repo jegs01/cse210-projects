@@ -30,17 +30,33 @@ class Scripture
         if (!AllWordsHidden)
         {
             int index1, index2;
-            do
+            
+            // Check if there's only one unhidden word left
+            if (words.Count - hiddenWordCount == 1)
             {
-                index1 = random.Next(words.Count);
-                index2 = random.Next(words.Count);
-            } while (index1 == index2 || words[index1].IsHidden || words[index2].IsHidden);
+                // Find the index of the remaining unhidden word
+                int remainingWordIndex = words.FindIndex(word => !word.IsHidden);
+                // Hide the remaining unhidden word
+                words[remainingWordIndex].Hide();
+                hiddenWordCount += 1;
+            }
+            else
+            {
+                // Randomly select two different indices until both words are unhidden
+                do
+                {
+                    index1 = random.Next(words.Count);
+                    index2 = random.Next(words.Count);
+                } while (index1 == index2 || words[index1].IsHidden || words[index2].IsHidden);
 
-            words[index1].Hide();
-            words[index2].Hide();
-            hiddenWordCount += 2;
+                // Hide the selected words
+                words[index1].Hide();
+                words[index2].Hide();
+                hiddenWordCount += 2;
+            }
         }
     }
+
 
     public void Display()
     {
