@@ -3,9 +3,8 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 
-// The scripture load from scriptures.txt file
-// The program work with a library of scriptures rather than a single one 
-// The program choose scriptures at random to present to the user
+// Exceed requirements by making the scriptures load from scriptures.txt file
+
 class Program
 {
     static void Main(string[] args)
