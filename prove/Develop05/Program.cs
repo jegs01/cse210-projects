@@ -232,7 +232,7 @@ class Program
         if (choice >= 1 && choice <= goals.Count)
         {
             goals[choice - 1].RecordEvent();
-            Console.WriteLine("Event recorded. Congrstulations, you have earned a new point");
+            Console.WriteLine("Event recorded. Congratulation, you have earned a new point");
         }
         else
         {
